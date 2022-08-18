@@ -37,7 +37,7 @@ public class StudentServiceImpl implements StudentService {
     /**
      * Выбрать всех студентов по заданному имени
      * @param name
-     * @return Список(заполненный или пустой, при отсутствии совпадений)
+     * @return Запросшенный список Студентов(заполненный или пустой, при отсутствии совпадений)
      */
     public List<Student> getByName(String name) {
 
@@ -54,6 +54,11 @@ public class StudentServiceImpl implements StudentService {
         return studentList;
     }
 
+    /**
+     * Отдать список Студентов по списку Id
+     * @param ids Список Id
+     * @return Запросшенный список Студентов(заполненный или пустой, при отсутствии совпадений)
+     */
     public List<Student> getByIds(List<Integer> ids) {
         List<Student> studentList = new ArrayList<>();
 
